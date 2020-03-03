@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import StreamChat
+import StreamChatCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        Configure client
+        
+        Client.config = .init(apiKey: "b67pax5b2wdq")
+        Client.shared.set(user: User(id: "icy-sun-8",
+                                      name: "Icy sun"),
+                          token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiaWN5LXN1bi04In0.63Uo3uun4O-opg0Ch_QcAfAXxqeGCmde2E0WpP5gZKI")
         return true
     }
 
